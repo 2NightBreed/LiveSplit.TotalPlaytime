@@ -19,11 +19,11 @@ public class DaysTimeFormatter : ITimeFormatter
 
             if (time.Value.TotalHours >= 1)
             {
-                builder.Append(time.Value.ToString(@"h\:mm\:ss", CultureInfo.InvariantCulture));
+                builder.Append(time.Value.ToString(@"h\:mm\:ss\.ff", CultureInfo.InvariantCulture));
             }
             else
             {
-                builder.Append(time.Value.ToString(@"m\:ss", CultureInfo.InvariantCulture));
+                builder.Append(time.Value.ToString(@"m\:ss\.ff", CultureInfo.InvariantCulture));
             }
 
             return builder.ToString();
