@@ -43,7 +43,7 @@ public class TotalPlaytimeComponent : IComponent
 
     public TotalPlaytimeComponent(LiveSplitState state)
     {
-        HoursTimeFormatter = new RegularTimeFormatter();
+        HoursTimeFormatter = new RegularTimeFormatter(TimeAccuracy.Hundredths);
         DaysTimeFormatter = new DaysTimeFormatter();
         InternalComponent = new InfoTimeComponent("Total Playtime", TimeSpan.Zero, DaysTimeFormatter);
         Settings = new TotalPlaytimeSettings()
